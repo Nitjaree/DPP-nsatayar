@@ -7,28 +7,30 @@
     <style>
       .image-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* แบ่งเป็น 3 คอลัมน์เท่าๆ กัน */
+        grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 3 คอลัมน์เท่าๆ กัน */
         gap: 16px; /* ระยะห่างระหว่างรูป */
       }
       .image-container img {
         width: 100%;
-        height: 200px; /* กำหนดความสูงเท่ากัน */
+        height: 100px; /* กำหนดความสูงเท่ากัน */
         object-fit: cover; /* ตัดส่วนเกินไม่ให้รูปยืดเสียสัดส่วน */
         border-radius: 8px;
       }
+        /* • Under that, a horizontal line that separates the page (no matter the size of the window). */
+        .page-splitter {
+            border: none;
+            border-top: 2px solid black;
+            width: 100%;
+            margin-bottom: 20px;
+        }
     
-      /* Three image containers (use 25% for four, and 50% for two, etc) */
-    .column {
-      float: left;
-      width: 46%;
-      padding: 10px;
+    .row {
+      display: flex;
     }
 
-    /* Clear floats after image containers */
-    .row::after {
-      content: "";
-      clear: both;
-      display: table;
+    .column {
+        flex: 50%;
+        padding: 5px;
     }
     body {
         background-color: pink;
@@ -39,21 +41,43 @@
         color: white;
         font-size: 50px;
     }
+    .site-footer {
+        background-color:pink;        
+        color: red;
+        text-align: right;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font: italic;
+        font-family: monospace;
+        margin-right: 20px;
+    }
     </style>
 </head>
 <body>
-    <h1>Piscine Web</h1>
-    <div class="row">
-    <div class="column">
-        <a href="https://shopee.co.th/"><img src=".\Shopee.png" alt="Shopee Logo" style="width:100%"></a>
+    <h1>&lt; My Favorites online shops &gt;</h1>
+    <div class="image-container">
+        <span style="display: inline-block; margin: 20px; text-align: center;">
+            <!-- • Two images representing online shops (บังคับขนาดภาพให้เท่ากันด้วย width/height) -->
+        <img src=".\Shopee.png" alt="Shopee Logo" style="width:100%; height: 300px;">
+            <br>
+        <a href="https://shopee.co.th/">Shopee</a>
+        </span>
+
+        <span style="display: inline-block; margin: 20px; text-align: center;">
+         <img src=".\lazada-seeklogo.png" alt="Lazada Logo" style="width:100%; height: 300px;">
+            <br>
+             <a href="https://www.lazada.co.th/" target="_blank">Lazada</a>
+        </span>
     </div>
-    <div class="column">
-        <a href="https://www.lazada.co.th/"><img src=".\lazada-seeklogo.png" alt="Lazada Logo" style="width:100%; height:430px;"></a>
-    </div>
-    </div>
+<tr></tr>
+    <br>
+        <hr class="page-splitter">
+
 </body>
 <footer class="site-footer">
-  <p>© wil 2026</p>
+  <p>&copy; nsatayar 2026  .</p>
 </footer>
     
 </html>
