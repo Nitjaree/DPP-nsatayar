@@ -1,0 +1,2 @@
+ls | paste -sd, -
+ls -m
