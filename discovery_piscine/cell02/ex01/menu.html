@@ -1,37 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SNCF Train Sandwich Menu</title>
-  <!-- เชื่อมโยงไฟล์ CSS -->
-  <link rel="stylesheet" href="menu.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNCF Sandwich Drop-Down Menu</title>
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
 
-<div class="sandwich-menu">
-  <!-- สวิตช์ลับสำหรับจับการคลิก (จะถูกซ่อนไว้ใน CSS) -->
-  <input type="checkbox" id="sandwich-toggle">
-  
-  <!-- ใช้ label ครอบขนมปังชิ้นบน เมื่อคลิกขนมปัง จะเท่ากับการกดติ๊กเลือก checkbox -->
-  <label for="sandwich-toggle" class="baguette-top">
-    🥖 Click to Open Train Info
-  </label>
-  
-  <ul class="fillings-dropdown">
-    <li class="butter">
-      <strong>Beurre (ลมและเมฆ):</strong> ลมพัด S/SE factor 5 ท้องฟ้ามีเมฆมาก
-    </li>
-    <li class="ham">
-      <strong>Jambon (ในขบวน):</strong> อุณหภูมิภายในตัวรถไฟอบอุ่น 22°C
-    </li>
-    <li class="cheese">
-      <strong>Gruyère (ดวงจันทร์):</strong> คืนวันเสาร์ที่ 12 ก.ย. 1985 จันทรุปราคา
-    </li>
-    <li class="baguette-bottom">
-      🚉 จุดนัดพบ: ทั้งสองขบวนอยู่ห่างจากปารีสเท่ากัน!
-    </li>
-  </ul>
-</div>
-
+    <div class="sandwich-menu">
+        <!-- Top Bun Trigger -->
+        <div class="baguette-top"></div>
+        
+        <!-- Sandwich Fillings Dropdown -->
+        <div class="sandwich-layers">
+        <strong class="layer butter">Beurre (ลมและเมฆ):</strong> 
+        <div class="layer butter">ลมพัด S/SE factor 5 ท้องฟ้ามีเมฆมาก</div>
+        <strong class="layer ham">Jambon (ในขบวน):</strong> 
+        <div class="layer ham">อุณหภูมิภายในตัวรถไฟอบอุ่น 22°C</div>
+        <strong class="layer cheese">Gruyère (ดวงจันทร์):</strong>
+        <div class="layer cheese"> คืนวันเสาร์ที่ 12 ก.ย. 1985 จันทรุปราคา </div>
+            <!-- Bottom Bun Base -->
+        <div class="baguette-bottom">จุดนัดพบ: ทั้งสองขบวนอยู่ห่างจากปารีสเท่ากัน!</div>
+    </div>
+    
 </body>
 </html>

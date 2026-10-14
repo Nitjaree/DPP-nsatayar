@@ -1,107 +1,141 @@
 body {
-  background-color: #f4f1ea;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    background-color: #f4f1ea;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 
-/* ส่วนครอบแซนด์วิช */
 .sandwich-menu {
-  position: relative;
-  width: 380px; /* ขยายความกว้างเล็กน้อยเพื่อให้ข้อความรถไฟอ่านง่ายขึ้น */
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
 
-/* ซ่อนกล่อง Checkbox สี่เหลี่ยมเชยๆ ไม่ให้ผู้ใช้เห็น */
-#sandwich-toggle {
-  display: none;
-}
-
-/* ขนมปังชิ้นบน (ปุ่มคลิก) */
+/* Top Baguette Crust (The Menu Button) */
 .baguette-top {
-  display: block; /* ทำให้กินพื้นที่เต็มความกว้าง */
-  background: linear-gradient(135deg, #e5a65d 0%, #b56f29 100%);
-  color: #ffffff;
-  font-weight: bold;
-  text-align: center;
-  padding: 18px;
-  border-radius: 25px 25px 5px 5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 16px;
-  border-bottom: 3px solid #8c5016;
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.3s ease;
+    background: linear-gradient(145deg, #e5a65d, #c68037);
+    color: #fff;
+    padding: 20px 60px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px 30px 10px 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15), inset 0 4px 8px rgba(255,255,255,0.3);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    border: 1px solid #b36d26;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-/* เอฟเฟกต์ตอนกดคลิกค้าง */
-.baguette-top:active {
-  transform: translateY(2px);
+/* Decorative flour/slashes on the baguette */
+.baguette-top::before {
+    content: "///   Le Menu Sandwich   ///";
+    opacity: 0.85;
+    font-style: italic;
 }
 
-/* ไส้แซนด์วิช (ตอนซ่อนอยู่) */
-.fillings-dropdown {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
-  z-index: 10;
+/* Dropdown Container */
+.sandwich-layers {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    width: 90%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
 }
 
-/* 🌟 คีย์เวิร์ดสำคัญ: เมื่อ #sandwich-toggle ถูกคลิก (:checked) ให้แสดงผลแผงไส้แซนด์วิชทันที
-#sandwich-toggle:checked ~ .fillings-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-} */
-
-/* ส่วนตกแต่งวัตถุดิบ */
-.fillings-dropdown li {
-  padding: 14px 20px;
-  font-size: 14px;
-  line-height: 1.5;
-  transition: transform 0.2s ease;
+/* Triggering the dropdown on hover */
+.sandwich-menu:hover .sandwich-layers {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
+.sandwich-menu:hover .baguette-top {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Base style for sandwich ingredient layers */
+.layer {
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Ingredient 1: Salted Butter */
 .butter {
-  background-color: #fff9c4;
-  color: #8d811c;
-  border-left: 8px solid #fbc02d;
+    background-color: #fff7c2;
+    color: #8a7316;
+    border-left: 8px solid #ffd43f;
+    border-right: 8px solid #ffd43f;
+    font-size: 16px;
 }
 
-.ham {
-  background-color: #ffcdd2;
-  color: #b71c1c;
-  border-left: 8px solid #e91e63;
+.butter:hover {
+    background-color: #fff4a3;
+    padding-left: 30px;
 }
 
+/* Ingredient 2: French Emmental Cheese */
 .cheese {
-  background-color: #fff59d;
-  color: #f57f17;
-  border-left: 8px solid #ffb300;
-  background-image: radial-gradient(circle at 90% 30%, #f57f17 8%, transparent 9%);
+    background-color: #fcebb6;
+    color: #7c6218;
+    border-left: 12px solid #f7d368;
+    border-right: 12px solid #f7d368;
+    position: relative;
+    font-size: 16px;
 }
 
+/* Swiss cheese holes effect */
+.cheese::after {
+    content: "o   O   o";
+    position: absolute;
+    right: 20px;
+    opacity: 0.3;
+    font-weight: normal;
+}
+
+.cheese:hover {
+    background-color: #fbe397;
+    padding-left: 30px;
+}
+
+/* Ingredient 3: Parisian Ham */
+.ham {
+    background-color: #ffccd5;
+    color: #a04050;
+    border-left: 10px solid #ff99aa;
+    border-right: 10px solid #ff99aa;
+    border-radius: 0 0 5px 5px;
+    font-size: 16px;
+}
+
+.ham:hover {
+    background-color: #ffb3c1;
+    padding-left: 30px;
+}
+
+/* Bottom Baguette Crust */
 .baguette-bottom {
-  background: linear-gradient(135deg, #b56f29 0%, #8c5016 100%);
-  color: #f4f1ea;
-  text-align: center;
-  border-radius: 5px 5px 25px 25px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  font-weight: bold;
-}
-
-.fillings-dropdown li:hover {
-  transform: scale(1.02);
+    background: linear-gradient(145deg, #c68037, #9e5b1e);
+    height: 25px;
+    border-radius: 5px 5px 25px 25px;
+    border: 1px solid #854812;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    margin-top: 2px;
+    text-align: center;
 }
