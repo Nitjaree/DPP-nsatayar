@@ -1,0 +1,107 @@
+body {
+  background-color: #f4f1ea;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* ส่วนครอบแซนด์วิช */
+.sandwich-menu {
+  position: relative;
+  width: 380px; /* ขยายความกว้างเล็กน้อยเพื่อให้ข้อความรถไฟอ่านง่ายขึ้น */
+}
+
+/* ซ่อนกล่อง Checkbox สี่เหลี่ยมเชยๆ ไม่ให้ผู้ใช้เห็น */
+#sandwich-toggle {
+  display: none;
+}
+
+/* ขนมปังชิ้นบน (ปุ่มคลิก) */
+.baguette-top {
+  display: block; /* ทำให้กินพื้นที่เต็มความกว้าง */
+  background: linear-gradient(135deg, #e5a65d 0%, #b56f29 100%);
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  padding: 18px;
+  border-radius: 25px 25px 5px 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border-bottom: 3px solid #8c5016;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+/* เอฟเฟกต์ตอนกดคลิกค้าง */
+.baguette-top:active {
+  transform: translateY(2px);
+}
+
+/* ไส้แซนด์วิช (ตอนซ่อนอยู่) */
+.fillings-dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  z-index: 10;
+}
+
+/* 🌟 คีย์เวิร์ดสำคัญ: เมื่อ #sandwich-toggle ถูกคลิก (:checked) ให้แสดงผลแผงไส้แซนด์วิชทันที
+#sandwich-toggle:checked ~ .fillings-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+} */
+
+/* ส่วนตกแต่งวัตถุดิบ */
+.fillings-dropdown li {
+  padding: 14px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: transform 0.2s ease;
+}
+
+.butter {
+  background-color: #fff9c4;
+  color: #8d811c;
+  border-left: 8px solid #fbc02d;
+}
+
+.ham {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+  border-left: 8px solid #e91e63;
+}
+
+.cheese {
+  background-color: #fff59d;
+  color: #f57f17;
+  border-left: 8px solid #ffb300;
+  background-image: radial-gradient(circle at 90% 30%, #f57f17 8%, transparent 9%);
+}
+
+.baguette-bottom {
+  background: linear-gradient(135deg, #b56f29 0%, #8c5016 100%);
+  color: #f4f1ea;
+  text-align: center;
+  border-radius: 5px 5px 25px 25px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  font-weight: bold;
+}
+
+.fillings-dropdown li:hover {
+  transform: scale(1.02);
+}
