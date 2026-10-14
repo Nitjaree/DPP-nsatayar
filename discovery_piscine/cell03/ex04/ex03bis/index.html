@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <title>My Web</title>
+    <!-- เพิ่ม jQuery Library เข้ามาในระบบ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body class="ui-container">
+    <h1>To-Do List</h1>
+    
+    <div id="ft_list"></div>
+    <br><br>
+    <div id="taskCount">Total tasks: 0</div>
+
+    <!-- ลบ onclick="addTask()" ออก เพื่อให้ jQuery จัดการแทน -->
+    <button id="addTaskButton">New</button>
+
+    <script src="todo.js"></script>   
+</body>  
+</html>

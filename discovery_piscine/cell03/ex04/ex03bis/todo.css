@@ -1,0 +1,8 @@
+div#ft_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: pink;
+    color: red;
+    width: 200px;
+}

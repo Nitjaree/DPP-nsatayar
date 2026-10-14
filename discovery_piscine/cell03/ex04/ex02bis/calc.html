@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css"> <!-- แก้ไขจาก <style url=""> เป็น <link rel="stylesheet"> เพื่อให้ดึง CSS ถูกต้อง -->
+    <title>My Web</title>
+    <!-- โหลดไลบรารี jQuery จาก CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body class="ui-container">
+    <input type="text" id="number1" placeholder="Enter the first number">
+    
+    <select name="operation" id="operation" class="ui-select">
+        <option value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+        <option value="modulo">%</option>
+    </select>
+    
+    <input type="text" id="number2" placeholder="Enter the second number">
+    <br><br>
+    
+    <!-- นำ onclick="calculate()" ออก แล้วจัดการผ่าน jQuery แทน -->
+    <button id="calculate">Try me!</button>
+    <p id="result"></p>
+
+    <script src="calc.js"></script>
+</body>
+</html>
