@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบเปรียบเทียบหลักสูตร (เลือกมุมมองได้)</title>
+    <link rel="stylesheet" href="sch.css">
+</head>
+<body>
+
+    <header>
+        <h1>ระบบเปรียบเทียบโครงสร้างหลักสูตร</h1>
+        <p>เลือกหลักสูตร และรูปแบบการแสดงผล (ดูทั้งหมด หรือแยกรายเทอม) ได้ทั้งฝั่งซ้ายและขวา</p>
+    </header>
+
+    <div class="container">
+        <!-- ฝั่งซ้าย -->
+        <div class="pane">
+            <div class="control-group">
+                <label for="curriculumLeft"><strong>หลักสูตรฝั่งซ้าย:</strong><img id="iconleft" src="sci.png" alt="Info" title="เลือกหลักสูตรเพื่อดูรายละเอียดโครงสร้างหลักสูตร"></label>
+                <select id="curriculumLeft" onchange="updateView('left')"></select>
+            </div>
+            <div class="control-group">
+                <label for="modeLeft"><strong>รูปแบบการแสดงผล:</strong></label>
+                <select id="modeLeft" onchange="toggleMode('left')">
+                    <option value="all">แสดงทั้งหมดทุกเทอม</option>
+                    <option value="term">ดูเฉพาะเทอม</option>
+                </select>
+            </div>
+            <div id="termFilterLeft" class="term-filter" style="display: none;">
+                <div>
+                    <label for="yearLeft">ชั้นปี:</label>
+                    <select id="yearLeft" onchange="updateView('left')">
+                        <option value="1">ปีที่ 1</option>
+                        <option value="2">ปีที่ 2</option>
+                        <option value="3">ปีที่ 3</option>
+                        <option value="4">ปีที่ 4</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="semLeft">ภาคการศึกษา:</label>
+                    <select id="semLeft" onchange="updateView('left')">
+                        <option value="1">เทอม 1</option>
+                        <option value="2">เทอม 2</option>
+                    </select>
+                </div>
+            </div>
+            <div id="infoLeft" class="curriculum-info"></div>
+            <div id="contentLeft"></div>
+        </div>
+
+        <!-- ฝั่งขวา -->
+        <div class="pane">
+            <div class="control-group">
+                <label for="curriculumRight"><strong>หลักสูตรฝั่งขวา:</strong><img id="iconright" src="eng.jpg" alt="Info" title="เลือกหลักสูตรเพื่อดูรายละเอียดโครงสร้างหลักสูตร"></label>
+                <select id="curriculumRight" onchange="updateView('right')"></select>
+            </div>
+            <div class="control-group">
+                <label for="modeRight"><strong>รูปแบบการแสดงผล:</strong></label>
+                <select id="modeRight" onchange="toggleMode('right')">
+                    <option value="all">แสดงทั้งหมดทุกเทอม</option>
+                    <option value="term">ดูเฉพาะเทอม</option>
+                </select>
+            </div>
+            <div id="termFilterRight" class="term-filter" style="display: none;">
+                <div>
+                    <label for="yearRight">ชั้นปี:</label>
+                    <select id="yearRight" onchange="updateView('right')">
+                        <option value="1">ปีที่ 1</option>
+                        <option value="2">ปีที่ 2</option>
+                        <option value="3">ปีที่ 3</option>
+                        <option value="4">ปีที่ 4</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="semRight">ภาคการศึกษา:</label>
+                    <select id="semRight" onchange="updateView('right')">
+                        <option value="1">เทอม 1</option>
+                        <option value="2">เทอม 2</option>
+                    </select>
+                </div>
+            </div>
+            <div id="infoRight" class="curriculum-info"></div>
+            <div id="contentRight"></div>
+        </div>
+    </div>
+
+    <script src="sch.js"></script>
+</body>
+</html>

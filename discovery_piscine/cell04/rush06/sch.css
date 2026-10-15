@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.pane {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.control-group {
+    margin-bottom: 12px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e;
+    font-size: 14px;
+}
+
+.term-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.term-filter > div {
+    flex: 1;
+}
+
+.term-filter label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+select {
+    width: 100%;
+    padding: 9px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #bdc3c7;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.curriculum-info {
+    background: #ebf5fb;
+    border-left: 4px solid #3498db;
+    padding: 10px 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+h4 {
+    color: #2980b9;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 4px;
+    font-size: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 8px 10px;
+    font-size: 13px;
+    text-align: left;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.no-data {
+    text-align: center;
+    color: #95a5a6;
+    padding: 20px;
+    font-style: italic;
+}
+
+/* Responsive สำหรับหน้าจอเล็ก */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+}
