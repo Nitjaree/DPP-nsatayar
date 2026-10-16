@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Layout</title>
+    <link rel="stylesheet" href="parallax.css">
+</head>
+<body>
+
+    <!-- ส่วนที่ 1: หน้าแรกเมื่อโหลดเข้ามา (ภาพพื้นหลังแรก + ข้อความตรงกลาง) -->
+    <div class="parallax-section bg-image-1">
+        <div class="message-box">
+            จากสิ่งเล็กๆ ในมือของเรา
+        </div>
+    </div>
+
+    <!-- ส่วนที่ 2: เมื่อเลื่อนลงมาจะเจอบล็อกสีดำ + ข้อความที่คุณเลือก -->
+    <div class="black-block">
+        <div class="black-block-text">
+            "เติบโต" <br>
+            <span style="font-size: 1.2rem; color: #888;">— ที่ละเล็ก ที่ละน้อย —</span>
+        </div>
+    </div>
+
+    <!-- ส่วนที่ 3: เมื่อเลื่อนลงไปล่างสุด จะเจอภาพพื้นหลังที่สอง + ข้อความตรงกลาง -->
+    <div class="parallax-section bg-image-2">
+        <div class="message-box">
+            สู่โลกอันกว้างใหญ่
+        </div>
+    </div>
+
+</body>
+</html>

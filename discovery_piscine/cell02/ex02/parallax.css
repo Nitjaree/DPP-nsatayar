@@ -1,0 +1,67 @@
+        /* รีเซ็ตค่าเริ่มต้นของเบราว์เซอร์ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* โครงสร้างหลักของกล่องเนื้อหาแต่ละส่วน */
+        .parallax-section {
+            position: relative;
+            height: 100vh; /* ให้แสดงผลเต็มหน้าจอตลอดเวลา */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; /* เทคนิคทำให้รูปภาพอยู่กับที่เมื่อสกรอลล์ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* บล็อกสีดำตรงกลางหน้า */
+        .black-block {
+            height: 100vh;
+            background-color: pink;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* ตกแต่งสไตล์ข้อความ */
+        .message-box {
+            background-color: pink; /* พื้นหลังข้อความโปร่งแสงเพื่อให้อ่านง่ายขึ้น */
+            border: 5px solid black;
+            color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            max-width: 80%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .black-block-text {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        /* กำหนดรูปภาพพื้นหลัง (คุณสามารถเปลี่ยน URL รูปภาพที่ต้องการได้ที่นี่) */
+        .bg-image-1 {
+            background-image: url('a.jpg');
+        }
+
+        .bg-image-2 {
+            background-image: url('b.jpg');
+        }

@@ -1,0 +1,146 @@
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* โครงสร้างหลักของการ์ด */
+        .profile-card {
+            background: linear-gradient(140deg, white 100%, pink 100%);
+            width: 350px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 24px;
+        }
+
+        /* ส่วนหัวด้านบนสุด (Header) */
+        .card-header {
+            background: linear-gradient(140deg, pink 0%, black 100%);
+            color: white;
+            padding: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* ส่วนเนื้อหาภายในการ์ด */
+        .card-body {
+            padding: 24px;
+        }
+
+        /* รูปโปรไฟล์ */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            margin-top: -10px;
+        }
+
+        /* ชื่อล็อกอิน */
+        .profile-login {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #333333;
+            margin: 12px 0 4px 0;
+        }
+
+        /* คำอธิบาย 2-3 คำ */
+        .profile-desc {
+            font-size: 0.9rem;
+            color: #777777;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ตารางแบบล่องหนสำหรับจัดวางข้อมูล (Invisible Table) */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+        }
+
+        .info-table td {
+            padding: 8px 4px;
+            font-size: 0.9rem;
+            text-align: left;
+            border: none; /* ซ่อนเส้นขอบทั้งหมด */
+        }
+
+        .info-table td.label {
+            color: #999999;
+            width: 35%;
+            font-weight: 500;
+        }
+
+        .info-table td.value {
+            color: #333333;
+            font-weight: 600;
+        }
+
+        /* ส่วนลิงก์โซเชียลมีเดีย */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.2s, background-color 0.2s;
+            cursor: pointer;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-2px);
+            background-color: #e4e6eb;
+        }
+
+        .social-icon img {
+            width: 18px;
+            height: 18px;
+            opacity: 0.7;
+        }
+
+        /* ปุ่มติดต่อด้านล่างสุด */
+        .contact-btn {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            background: linear-gradient(135deg, black 0%, pink 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
