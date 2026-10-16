@@ -263,7 +263,7 @@ function showContact(){
     if (document.getElementById('Contact').value === "Pill"){
         window.location = "pill.html";
     } else {
-        window.lacation = "ninja.html";
+        window.location = "ninja.html";
     }
 
 }
